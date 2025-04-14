@@ -22,10 +22,11 @@ const Contact = () => {
   const handleWhatsAppSend = () => {
     const { name, email, message } = form;
     const phoneNumber = "918766971902";
-    const text = `Hello, I'm ${name} (%0AEmail: ${email})%0A%0A${message}`;
+    const text = `Hello, I'm ${name}\nEmail: ${email}\nMessage: ${message}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
+  ;
 
   return (
     <Box sx={{ flexGrow: 1, padding: 4, backgroundColor: "black"}} id="contacts">
